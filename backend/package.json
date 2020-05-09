@@ -7,7 +7,7 @@
     "admin": "prisma --experimental studio",
     "setup": "yarn node setup.js && prisma generate",
     "introspect": "prisma introspect",
-    "generate": "prisma generate",
+    "generate": "prisma2 generate",
     "clean": "rm -rf dev.db"
   },
   "devDependencies": {
