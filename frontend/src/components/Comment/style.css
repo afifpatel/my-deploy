@@ -1,0 +1,72 @@
+.comment {
+  padding: 20px 40px;
+  background-color: rgb(17, 48, 80);
+  border-radius: 5px;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
+}
+.comment__header {
+  display: flex;
+  align-items: center;
+}
+
+.comment__heading {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgb(213, 235, 255);
+}
+
+.comment_timestamp {
+  font-size: 0.9rem;
+  color: rgb(73, 116, 156);
+}
+
+.comment__body {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+.reply__button__text {
+  color: rgb(177, 174, 174)
+}
+
+.reply__button__text:after {
+  font-size: large;
+  content: ' \02C5';
+  color: black;
+  padding-left: 10px;
+}
+
+.active, .collapsible {
+  background-color: rgb(236, 195, 60);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(182, 179, 179);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
