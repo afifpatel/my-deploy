@@ -6,6 +6,7 @@
   ],
   "scripts": {
     "start": "yarn backend:start",
+    "heroku-postbuild": "echo Skip build on heroku",
     "build": "yarn workspace frontend build",
     "frontend:start": "yarn workspace frontend start",
     "backend:start": "yarn workspace backend start",
