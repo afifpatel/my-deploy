@@ -1,5 +1,9 @@
 {
   "private": true,
+  "engines": {
+    "node": "11.0.0",
+    "yarn": "1.21.1"
+  },
   "workspaces": [
     "frontend",
     "backend"

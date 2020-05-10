@@ -1,13 +1,13 @@
-import { PrismaClient } from "@prisma/client";
-import express, { static } from "express";
-import { json } from "body-parser";
-import cors from "cors";
-import { join } from "path";
+const { PrismaClient } = require("@prisma/client");
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const path = require("path");
 
 const prisma = new PrismaClient();
 const app = express();
 
-app.use(json());
+app.use(bodyParser.json());
 app.use(
   cors({
     origin: "*",
@@ -15,7 +15,7 @@ app.use(
 );
 
 // app.use(express.static('build'));
-app.use(static(join(__dirname, '../frontend/build')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 // app.get('*',  (req, res) => {
 //   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
@@ -125,7 +125,7 @@ app.use((err, req, res, next) => {
 });
 
 app.use((req, res) => {
-  res.sendFile(join(__dirname, '../frontend/build/index.html'));
+  res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 })
 
 const PORT = process.env.PORT || 5000;
