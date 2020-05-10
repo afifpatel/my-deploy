@@ -3,7 +3,7 @@
   "license": "UNLICENSED",
   "version": "1.0.0",
   "scripts": {
-    "start": "node server.js",
+    "start": "yarn setup && node server.js",
     "admin": "prisma --experimental studio",
     "setup": "yarn node setup.js && prisma generate",
     "introspect": "prisma introspect",
